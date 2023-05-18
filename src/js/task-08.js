@@ -1,8 +1,8 @@
-const loginFormRef = document.querySelector('.login-form');
+const loginForm = document.querySelector('.login-form');
 
-loginFormRef.addEventListener('submit', onLoginFormRefSubmit);
+loginForm.addEventListener('submit', onLoginFormSubmit);
 
-function onLoginFormRefSubmit (event) {
+function onLoginFormSubmit (event) {
     event.preventDefault();
     
     const {
@@ -18,6 +18,6 @@ function onLoginFormRefSubmit (event) {
 
     console.log(userData);
 
-    loginFormRef.reset();
+    loginForm.reset();
 
 };
