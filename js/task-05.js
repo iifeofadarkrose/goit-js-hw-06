@@ -1,13 +1,14 @@
-const rest = {
-    input: document.querySelector('#name-input'),
-    span: document.querySelector('#name-output'),
-    
-}
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-rest.input.addEventListener('input',onInputChange)
+input.addEventListener('input', onInputListener);
 
-function onInputChange(event) {
-    event.preventDefault();
-    rest.span.textContent = rest.input.value
-        ? rest.input.value : rest.span.textContent;
-}
+function onInputListener (event) {
+    if (event.currentTarget.value === '') {
+        output.textContent = 'Anonymous';
+    }
+    else {
+        output.textContent = event.currentTarget.value;
+    };
+
+};
